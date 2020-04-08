@@ -1,0 +1,10 @@
+page {
+    --blue: #3171e0 !important;
+    --green: #67c23a !important;
+    --orange: #E6A23C !important;
+    --grey: #909399 !important;
+    --red: #F56C6C !important;
+    --font-sm: 24rpx;
+    --font-mid: 28rpx;
+    --font-lg: 36rpx;
+}
