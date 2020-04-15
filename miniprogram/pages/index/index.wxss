@@ -2,6 +2,6 @@
 
 @import'../../assets/style/variable.wxss';
 .test-theme-class {
-  color: var(--primary-color);
-  font-size: var(--font-lg);
+  color: var(--PRIMARY-COLOR);
+  font-size: var(--FONT-LG);
 }

@@ -37,14 +37,14 @@ class ApiFetch {
       _this.header.Authorization = authToken || _this.header.Authorization;
     }
 
-    return new Promise((resolve: any, reject: any) => {
+    return new Promise((resolve: Function, reject: Function) => {
       wx.request({
         header: _this.header,
         data: data,
         url: _this.withBaseURL ? _this.baseURL + url : url,
         method: method || "GET",
-        success(res: httpResponse) {
-          handleRes(res, resolve, reject);
+        success(res) {
+          handleRes(<httpResponse>res, resolve, reject);
         },
         fail(e) {
           wx.showToast({
@@ -60,7 +60,7 @@ class ApiFetch {
   }
 }
 
-const handleRes = (res: httpResponse, resolve: any, reject: any) => {
+const handleRes = (res: httpResponse, resolve: Function, reject: Function) => {
   const statusCode = res.statusCode;
   const resData = <resultData>res.data;
   if (statusCode >= 200 && statusCode < 300) {
@@ -72,7 +72,7 @@ const handleRes = (res: httpResponse, resolve: any, reject: any) => {
   }
 }
 
-const judgeErrCode = (errCode: number, reject: any) => {
+const judgeErrCode = (errCode: number, reject: Function) => {
   let hint;
   switch (errCode) {
     case 0:

@@ -1,17 +1,17 @@
 [data-cfb-theme=default], page {
-    --primary-color: #3171e0 !important;
-    --blue: #3171e0 !important;
-    --green: #67c23a !important;
-    --orange: #E6A23C !important;
-    --grey: #909399 !important;
-    --red: #F56C6C !important;
-    --font-sm: 24rpx;
-    --font-mid: 28rpx;
-    --font-lg: 36rpx;
-    --card-border-radius: 20rpx;
+    --PRIMARY-COLOR: #3171e0 !important;
+    --BLUE: #3171e0 !important;
+    --GREEN: #67c23a !important;
+    --ORANGE: #E6A23C !important;
+    --GREY: #909399 !important;
+    --RED: #F56C6C !important;
+    --FONT-SM: 24rpx;
+    --FONT-MID: 28rpx;
+    --FONT-LG: 36rpx;
+    --CARD-BORDER-RADIUS: 20rpx;
 }
 
 [data-cfb-theme=dark] {
-    --primary-color: #000 !important;
-    --font-lg: 20rpx;
+    --PRIMARY-COLOR: #000 !important;
+    --FONT-LG: 20rpx;
 }

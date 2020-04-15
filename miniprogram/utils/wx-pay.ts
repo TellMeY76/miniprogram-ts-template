@@ -8,13 +8,13 @@ const app = <IAppOption>getApp();
 const payByPayActionForm = function ({ payDataForm, sucFn, completeFn }: PayActionForm) {
     app.fetchApi?.fetch("POST", Apis.GET_PAY_INFO, payDataForm).then((res) => {
         if (res) {
-            const payData = <WXPayObj>(res as unknown as resultData)?.data
+            const payData = <WXPayObj>(res as unknown as resultData)?.data;
             callWXPay(payData, sucFn, completeFn);
         }
     });
 };
 
-const callWXPay = function (payData: WXPayObj, sucFn: any, completeFn: any) {
+const callWXPay = function (payData: WXPayObj, sucFn: Function, completeFn: Function) {
     wx.requestPayment({
         ...payData,
         success() {
