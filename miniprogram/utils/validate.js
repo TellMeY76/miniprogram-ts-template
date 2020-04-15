@@ -24,12 +24,10 @@ const validate = (formFld, that) => {
             const ruleName = validator[i].split("=")[0];
             const rule = validators[ruleName].rule || /.*/;
             validateForm[name] = rule.test(value) ? "" : validators[ruleName].msg;
-            if (validateForm[name])
-                break;
+            if (validateForm[name]) break;
         }
         setValidateForm(validateForm, that);
-    }
-    else {
+    } else {
         console.error("表单字段名缺失");
     }
 };
@@ -49,9 +47,7 @@ const setValidateForm = (validateForm, that) => {
     validateForm["invalidMsg"] = "";
     for (let fld in validateForm) {
         if (fld !== "invalidMsg" && fld !== "dirty") {
-            validateForm["invalidMsg"] = validateForm[fld].trim()
-                ? validateForm[fld]
-                : validateForm["invalidMsg"];
+            validateForm["invalidMsg"] = validateForm[fld].trim() ? validateForm[fld] : validateForm["invalidMsg"];
         }
     }
     that.setData({
