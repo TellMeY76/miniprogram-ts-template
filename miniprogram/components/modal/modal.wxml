@@ -1,0 +1,10 @@
+<view class='mask' wx:if='{{show}}'>
+    <view class='modal-content {{bgTp ? "bgTp":""}}' style='width:{{width}};height:{{height}}'>
+        <view class='main-content'>
+            <slot></slot>
+        </view>
+    </view>
+    <view wx:if="{{showClose}}" class="closeModel" bindtap='closeModel'>
+        <i class="iconfont icon-close1"></i>
+    </view>
+</view>

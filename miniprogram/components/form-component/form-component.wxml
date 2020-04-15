@@ -1,0 +1,7 @@
+		<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+
+		<block wx:if="{{rules && formData}}">
+			<mp-form id="form" rules="{{rules}}" models="{{formData}}">
+				<button class="weui-btn" type="primary" bindtap="submitForm">提交表单</button>
+			</mp-form>
+		</block>

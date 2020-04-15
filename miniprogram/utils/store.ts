@@ -20,4 +20,4 @@ class WxStorage {
 }
 
 const store = new WxStorage();
-export { store };
+export { WxStorage, store };

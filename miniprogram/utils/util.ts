@@ -14,18 +14,19 @@ const formatTime = (date: Date) => {
 }
 
 const formatNumber = (n: number) => {
-  const s = n.toString()
+  const s: string = n.toString()
   return s[1] ? s : '0' + s
 }
 
-const distanceNow = (startDate: string) => {
-  let differenceDay = 0;
-  if (startDate) {
-    const date = new Date(startDate.replace(/\-/g, "/"));
-    const endDate = new Date().toLocaleDateString();
-    differenceDay = Math.floor((date.getTime() - new Date(endDate).getTime()) / (1000 * 3600 * 24));
+
+const distanceNow = (dateString: string) => {
+  let diffDays: number = 0;
+  if (dateString) {
+    const startDate: Date = new Date(dateString.replace(/\-/g, "/"));
+    const endDateString: string = new Date().toLocaleDateString();
+    diffDays = Math.floor((startDate.getTime() - new Date(endDateString).getTime()) / (1000 * 3600 * 24));
   }
-  return differenceDay;
+  return diffDays;
 };
 
 export { formatTime, distanceNow }

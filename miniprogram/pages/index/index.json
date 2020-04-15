@@ -1,3 +1,16 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "mp-navigation-bar": "/weui-miniprogram/navigation-bar/navigation-bar",
+    "mp-cells": "/weui-miniprogram/cells/cells",
+    "mp-cell": "/weui-miniprogram/cell/cell",
+    "mp-slideview": "/weui-miniprogram/slideview/slideview",
+    "mp-form-page": "/weui-miniprogram/form-page/form-page",
+    "mp-form": "/weui-miniprogram/form/form",
+    "mp-actionSheet": "/weui-miniprogram/actionsheet/actionsheet",
+    "mp-toptips": "/weui-miniprogram/toptips/toptips",
+    "mp-checkbox": "/weui-miniprogram/checkbox/checkbox",
+    "mp-checkbox-group": "/weui-miniprogram/checkbox-group/checkbox-group",
+    "mp-dialog": "/weui-miniprogram/dialog/dialog",
+    "mp-msg": "/weui-miniprogram/msg/msg"
+  }
 }

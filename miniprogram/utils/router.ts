@@ -23,4 +23,4 @@ class WxRouter {
   }
 }
 const router = new WxRouter();
-export { router };
+export { WxRouter, router };

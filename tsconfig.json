@@ -24,7 +24,7 @@
     ]
   },
   "include": [
-    "./**/*.ts"
+    "./**/*.ts", "miniprogram/libs/Mixins.js"
   ],
   "exclude": [
     "node_modules"

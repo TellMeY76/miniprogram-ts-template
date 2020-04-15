@@ -1,19 +1,31 @@
 /// <reference path="./types/index.d.ts" />
 
+import { ApiFetch } from "../miniprogram/utils/fetchApi";
+import { WxStorage } from "../miniprogram/utils/store";
+import { WxRouter } from "../miniprogram/utils/router";
+import { MiniProgram, Plugin, WXUserInfo, GetUserInfoSuccessCallback } from "../miniprogram/models/wxModels";
+
 
 interface IAppOption {
-  fetchApi?: any,
-  store?: any,
-  router?: any,
-  miniProgramInfo?: WechatMiniprogram.MiniProgram,
-  pluginInfo?: WechatMiniprogram.Plugin,
+  fetchApi?: ApiFetch,
+  store?: WxStorage,
+  router?: WxRouter,
+  miniProgramInfo?: MiniProgram,
+  pluginInfo?: Plugin,
   globalData: {
-    userInfo?: WechatMiniprogram.UserInfo,
+    userInfo?: WXUserInfo,
     isIpx?: boolean;
     statusBarHeight?: number;
     navBarHeight?: number;
+    theme?: string;
   }
-  userInfoReadyCallback?: WechatMiniprogram.GetUserInfoSuccessCallback,
+  userInfoReadyCallback?: GetUserInfoSuccessCallback,
+
+  themeChanged?: Function,
+
+  watchThemeChange?: Function,
+
+  unWatchThemeChange?: Function,
 }
 
 interface WXTriggerEvent {
@@ -24,3 +36,4 @@ interface WXTriggerEvent {
 interface EventTarget {
   dataset: AnyObject
 }
+
