@@ -11,7 +11,7 @@ App<IAppOption>({
   store: store,
   router: router,
   miniProgramInfo: wx.getAccountInfoSync().miniProgram,
-  pluginInfo: wx.getAccountInfoSync().plugin,
+  // pluginInfo: wx.getAccountInfoSync().plugin,
   globalData: {
     isIpx: false,
     statusBarHeight: 0,
