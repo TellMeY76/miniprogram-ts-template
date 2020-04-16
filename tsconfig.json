@@ -18,13 +18,17 @@
     "removeComments": true,
     "pretty": true,
     "strictPropertyInitialization": true,
-    "lib": ["es6"],
+    "lib": [
+      "es6",
+      "es2017.object"
+    ],
     "typeRoots": [
       "./typings"
     ]
   },
   "include": [
-    "./**/*.ts", "miniprogram/libs/Mixins.js"
+    "./**/*.ts",
+    "miniprogram/libs/Mixins.js"
   ],
   "exclude": [
     "node_modules"

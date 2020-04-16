@@ -29,4 +29,6 @@ const distanceNow = (dateString: string) => {
   return diffDays;
 };
 
-export { formatTime, distanceNow }
+const convertObjToMap = (obj: Object) => new Map(Object.entries(obj));
+
+export { formatTime, distanceNow, convertObjToMap }
